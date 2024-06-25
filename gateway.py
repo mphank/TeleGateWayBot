@@ -125,7 +125,8 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         users[user_id]['invites_left'] -= 1
         save_users(users)
         await query.edit_message_text(text="✅ Captcha completed! Here is your invite link: 🎉")
-        invite_link = await context.bot.create_chat_invite_link(CHANNEL_ID, member_limit=1)
+        expire_date = datetime.now() + timedelta(seconds=10)
+        invite_link = await context.bot.create_chat_invite_link(CHANNEL_ID, expire_date=expire_date)
         await query.message.reply_text("👉 Join Channel", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Join", url=invite_link.invite_link)]]))
     else:
         await query.edit_message_text(text="❌ Incorrect. Please try again by sending /start.")
@@ -174,7 +175,8 @@ async def create_invite(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
         if (now - last_invite) > timedelta(weeks=1):
             users[user_id]['invites_left'] = 3
         if users[user_id]['invites_left'] > 0:
-            invite_link = await context.bot.create_chat_invite_link(CHANNEL_ID, member_limit=1)
+            expire_date = datetime.now() + timedelta(seconds=10)
+            invite_link = await context.bot.create_chat_invite_link(CHANNEL_ID, expire_date=expire_date)
             invite_link = invite_link.invite_link
             users[user_id]['last_invite'] = str(now)
             users[user_id]['invites_left'] -= 1
