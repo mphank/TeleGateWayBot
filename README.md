@@ -1,6 +1,6 @@
-# AbbiBot
+# GateBot
 
-AbbiBot is a Telegram bot that helps manage user verification and channel invites. It includes features for both regular users and admins, ensuring a smooth and secure experience.
+GateBot is a Telegram bot that helps manage user verification and channel invites. It includes features for both regular users and admins, ensuring a smooth and secure experience.
 
 ## Features
 
@@ -19,6 +19,8 @@ AbbiBot is a Telegram bot that helps manage user verification and channel invite
     ```sh
     cd TeleGateWayBot
     ```
+
+[Now create a bot on telegram and get the token, then make it an administrator on your channel](https://t.me/BotFather)
 
 3. Edit `gateway.py` with your telegram settings.
 
@@ -43,7 +45,7 @@ AbbiBot is a Telegram bot that helps manage user verification and channel invite
 ### Admins
 
 - `/admin` - Open the admin panel.
-- `/join_channel` - Join a channel (forward a message from the channel or send the channel link).
+- `/join_channel` - Join a channel (forward a message from the channel or send the channel link). 
 
 ## Configuration
 
