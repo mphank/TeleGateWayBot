@@ -18,9 +18,9 @@ from telegram.ext import (
     filters,
 )
 
-TOKEN = '7404806304:AAFlmje5H0gxXaUDhJVZnEdcZfcohJTZJGg'
-CHANNEL_ID = '-1001954736957'  # Replace with your channel ID
-ADMIN_IDS = [7154300408]  # Replace with the Telegram user IDs of the admins
+TOKEN = 'YOURTOKENHERE'
+CHANNEL_ID = 'CHANNELIDHERE'  # Replace with your channel ID
+ADMIN_IDS = [ADMINIDHERE]  # Replace with the Telegram user IDs of the admins
 
 # Enable logging
 logging.basicConfig(
