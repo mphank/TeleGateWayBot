@@ -1,0 +1,14 @@
+{
+    "7154300408": {
+        "joined": true,
+        "last_invite": "2024-06-25 15:47:47.601554",
+        "invites_left": 3,
+        "admin": true
+    },
+    "1338934463": {
+        "joined": true,
+        "last_invite": "2024-06-25 16:03:14.938965",
+        "invites_left": 2,
+        "admin": false
+    }
+}
